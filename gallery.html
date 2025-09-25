@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Amtali GTSC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h1>Amtali GTSC</h1>
+    <div class="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="teachers.html">Teachers</a></li>
+      <li><a href="departments.html">Departments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="dark-toggle">🌙</div>
+  </nav>
+
+  
+<section class="section"><h2>School Gallery</h2>
+<div class="cards">
+  <div class="card"><img src="images/school/photo1.jpg"></div>
+  <div class="card"><img src="images/school/photo2.jpg"></div>
+  <div class="card"><img src="images/school/photo3.jpg"></div>
+  <div class="card"><img src="images/school/photo4.jpg"></div>
+</div></section>
+
+
+  <footer>
+    <p>© 2025 Amtali Government Technical School & College</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    const darkToggle = document.querySelector('.dark-toggle');
+    const body = document.querySelector('body');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    darkToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      darkToggle.textContent = body.classList.contains('dark') ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
